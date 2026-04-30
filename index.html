@@ -5,59 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation">
+  <meta name="description" content="A unified metric for concept preservation and prompt following in text-to-image diffusion, computed in a single forward pass of a frozen SigLIP2 encoder.">
+  <meta name="keywords" content="concept preservation, prompt following, text-to-image evaluation, diffusion models, personalization, SigLIP2, DreamBench++, machine learning, computer vision">
+  <meta name="author" content="Patryk Bartkowiak, Lennart Petersen, Sören Pirk, Wojtek Pałubicki">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="MaSC Metric">
+  <meta property="og:title" content="MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation">
+  <meta property="og:description" content="A unified metric for concept preservation and prompt following in text-to-image diffusion, computed in a single forward pass of a frozen SigLIP2 encoder.">
+  <meta property="og:url" content="https://masc-metric.github.io/">
+  <meta property="og:image" content="https://masc-metric.github.io/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Patryk Bartkowiak">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="concept preservation">
+  <meta property="article:tag" content="text-to-image evaluation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation">
+  <meta name="twitter:description" content="A unified metric for concept preservation and prompt following in text-to-image diffusion, computed in a single forward pass of a frozen SigLIP2 encoder.">
+  <meta name="twitter:image" content="https://masc-metric.github.io/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  <meta name="citation_title" content="MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation">
+  <meta name="citation_author" content="Bartkowiak, Patryk">
+  <meta name="citation_author" content="Petersen, Lennart">
+  <meta name="citation_author" content="Pirk, Sören">
+  <meta name="citation_author" content="Pałubicki, Wojtek">
+  <meta name="citation_publication_date" content="2026">
+  <!-- TODO: Add PDF URL once available -->
+  <meta name="citation_pdf_url" content="https://masc-metric.github.io/static/pdfs/paper.pdf">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -73,8 +59,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -114,50 +99,60 @@
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation",
+    "description": "A unified metric for concept preservation and prompt following in text-to-image diffusion, computed in a single forward pass of a frozen SigLIP2 encoder.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
+        "name": "Patryk Bartkowiak",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "Adam Mickiewicz University"
         }
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
+        "name": "Lennart Petersen",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "Kiel University"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Sören Pirk",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Kiel University"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wojtek Pałubicki",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Adam Mickiewicz University"
         }
       }
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "datePublished": "2026-01-01",
+    "url": "https://masc-metric.github.io/",
+    "image": "https://masc-metric.github.io/static/images/social_preview.png",
+    "keywords": ["concept preservation", "prompt following", "text-to-image evaluation", "diffusion models", "SigLIP2", "personalization"],
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      "@id": "https://masc-metric.github.io/"
     },
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Text-to-image generation evaluation"
       },
       {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "@type": "Thing",
+        "name": "Concept-driven personalization"
       }
     ]
   }
@@ -168,12 +163,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "name": "MaSC Metric",
+    "url": "https://masc-metric.github.io/",
+    "logo": "https://masc-metric.github.io/static/images/favicon.ico",
     "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/masc-metric"
     ]
   }
   </script>
@@ -186,7 +180,7 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
+  <!-- More Works Dropdown — hidden until related works are added
   <div class="more-works-container">
     <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
       <i class="fas fa-flask"></i>
@@ -201,19 +195,14 @@
         </button>
       </div>
       <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
         <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
           <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
             <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
             <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
             <span class="work-venue">Conference/Journal 2024</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <!-- TODO: Add more related works or remove extra items -->
         <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
           <div class="work-info">
             <h5>Paper Title 2</h5>
@@ -233,6 +222,7 @@
       </div>
     </div>
   </div>
+  End More Works Dropdown -->
 
   <main id="main-content">
   <section class="hero">
@@ -240,72 +230,56 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation</h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                Patryk Bartkowiak<sup>1</sup>,</span>
+              <span class="author-block">
+                Lennart Petersen<sup>2</sup>,</span>
+              <span class="author-block">
+                Sören Pirk<sup>2</sup>,</span>
+              <span class="author-block">
+                Wojtek Pałubicki<sup>1</sup></span>
+          </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Adam Mickiewicz University, <sup>2</sup>Kiel University</span>
+          </div>
 
                   <div class="column has-text-centered">
+                    <p class="is-size-5"><em>Paper, code, and arXiv links coming soon.</em></p>
+                    <!--
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
+                        <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
                       <span>Supplementary</span>
                     </a>
                   </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
             </div>
+            -->
           </div>
         </div>
       </div>
@@ -314,23 +288,18 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <img src="static/images/method_diagram.png" alt="MaSC method diagram: a frozen SigLIP2 encoder produces both Concept Preservation and Prompt Following scores in a single forward pass, conditioned on a foreground concept mask." style="width:100%; height:auto;" />
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        MaSC extracts both Concept Preservation and Prompt Following from a single forward pass of a frozen SigLIP2 SO400M-NaFlex encoder, conditioned on a foreground concept mask.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser figure -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -339,9 +308,11 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Evaluating single-concept personalization in text-to-image diffusion requires two distinct signals — Concept Preservation (CP), measuring identity fidelity to a reference, and Prompt Following (PF), measuring scene adherence — which existing pipelines compute with three separate backbones (CLIP-I + CLIP-T + DINO) or expensive, opaque LLM judges (GPT-4V/4o). We propose a unified metric that extracts both signals from a single forward pass of a frozen SigLIP2 SO400M-NaFlex encoder, conditioned on a foreground concept mask supplied as input. CP is a masked max-cosine over patch tokens restricted to the foreground concept region; PF is computed by passing the same patch tokens through SigLIP2's trained attention pooler with the foreground mask used as a key-padding mask, then taking cosine against a subject-stripped prompt embedding.
+          </p>
+          <p>
+            On DreamBench++ human ratings, our CP metric reaches Krippendorff <em>α</em> = +0.471 — beating every non-LLM baseline (DINOv3, DreamSim, AM-RADIO, DIFT-SDXL), beating GPT-4V, and approaching GPT-4o. On ORIDa-train, a real-photo benchmark of identity preservation across physical environments, it reaches AUC = 0.992 — the first non-LLM CP metric to beat GPT-4o on a CP benchmark, establishing state of the art on naturalistic identity discrimination. Unlike VLM judges, every CP score is a transparent aggregate over per-patch cosine similarities, yielding free spatial attribution maps that show which regions of the reference matched where in the output — interpretability that is structurally unavailable to black-box LLM scorers. Same-backbone ablations confirm the lift comes from the formulation, not the encoder choice. Our PF score, obtained at zero additional compute, also beats the standard CLIP-T baseline. We release the metric as a pip-installable Python package, alongside configs, scripts, and reproduced ground-truth tables for every comparator.
           </p>
         </div>
       </div>
@@ -351,60 +322,44 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Image carousel — hidden until results are ready
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- TODO: Replace with your research result images -->
         <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <h2 class="subtitle has-text-centered">First image description.</h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+        <h2 class="subtitle has-text-centered">Second image description.</h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
+        <h2 class="subtitle has-text-centered">Third image description.</h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
       <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+      <h2 class="subtitle has-text-centered">Fourth image description.</h2>
     </div>
   </div>
 </div>
 </div>
 </section>
-<!-- End image carousel -->
+End image carousel -->
 
 
 
 
-<!-- Youtube video -->
+<!-- Youtube video — hidden until video is ready
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
           <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
@@ -412,33 +367,27 @@
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+End youtube video -->
 
 
-<!-- Video carousel -->
+<!-- Video carousel — hidden until videos are ready
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
             <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
             <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
             <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
@@ -446,31 +395,25 @@
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+End video carousel -->
 
 
 
 
-
-
-<!-- Paper poster -->
+<!-- Paper poster — hidden until poster is ready
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <iframe src="static/pdfs/sample.pdf" width="100%" height="550"></iframe>
       </div>
     </div>
   </section>
-<!--End paper poster -->
+End paper poster -->
 
 
 
-<!--BibTex citation -->
+<!-- BibTeX citation — hidden until paper is published
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -489,7 +432,7 @@
 }</code></pre>
     </div>
 </section>
-<!--End BibTex citation -->
+End BibTeX citation -->
 
 
   <footer class="footer">
