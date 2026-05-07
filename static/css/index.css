@@ -104,8 +104,7 @@ body {
 }
 
 .teaser .hero-body {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding: 2rem 0 4rem;
 }
 
 .teaser {
@@ -648,7 +647,7 @@ code {
   }
   
   .teaser .hero-body {
-    padding: 1rem;
+    padding: 1rem 0;
   }
   
   .content.has-text-justified {

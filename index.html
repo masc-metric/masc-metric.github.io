@@ -308,12 +308,12 @@
 
 <!-- Teaser figure -->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-fullhd">
     <div class="hero-body">
       <img src="static/images/masc-diagram.png" alt="MaSC method diagram: a frozen SigLIP2 encoder produces both Concept Preservation and Prompt Following scores in a single forward pass, conditioned on a foreground concept mask." style="width:100%; height:auto;" />
-      <h2 class="subtitle has-text-centered">
-        MaSC extracts both Concept Preservation and Prompt Following from a single forward pass of a frozen SigLIP2 SO400M-NaFlex encoder, conditioned on a foreground concept mask.
-      </h2>
+      <p class="subtitle has-text-justified" style="font-size: 0.875rem; margin-top: 1.25rem;">
+        <strong>MaSC pipeline overview.</strong> Reference and generated images are encoded once each by a frozen SigLIP2 SO400M-NaFlex vision tower, producing patch-token grids <em>R</em>, <em>G</em> &isin; &#8477;<sup><em>N</em>&times;<em>D</em></sup>. MaSC consumes provided foreground concept masks, denoted <em>M<sub>R</sub><sup>F</sup></em>, <em>M<sub>G</sub><sup>F</sup></em> &isin; {0, 1}<sup><em>H</em>&times;<em>W</em></sup>. Two branches share the single forward pass. <em>Branch 1 &mdash; Concept Preservation (masked-maxcos):</em> for each patch covered by the reference foreground mask (<em>M<sub>R</sub><sup>F</sup></em>), take its maximum cosine similarity against all output patches in <em>G</em>, then average over the foreground-reference patches. <em>Branch 2 &mdash; Prompt Following (Text-Background Alignment):</em> the trained SigLIP2 attention pooler is run with foreground patches of <em>G</em> masked from the attention computation, producing a background-only embedding. This is compared via cosine similarity to the text embedding <em>e</em><sub>text</sub> of the prompt with the subject noun stripped.
+      </p>
     </div>
   </div>
 </section>
