@@ -9,7 +9,7 @@
   <meta name="title" content="MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation">
   <meta name="description" content="A unified metric for concept preservation and prompt following in text-to-image diffusion, computed in a single forward pass of a frozen SigLIP2 encoder.">
   <meta name="keywords" content="concept preservation, prompt following, text-to-image evaluation, diffusion models, personalization, SigLIP2, DreamBench++, machine learning, computer vision">
-  <meta name="author" content="Patryk Bartkowiak, Lennart Petersen, Bartosz Kotrys, Sören Pirk, Wojtek Pałubicki">
+  <meta name="author" content="Patryk Bartkowiak, Lennart Petersen, Bartosz Kotrys, Dominik L. Michels, Sören Pirk, Wojtek Pałubicki">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
@@ -41,11 +41,12 @@
   <meta name="citation_author" content="Bartkowiak, Patryk">
   <meta name="citation_author" content="Petersen, Lennart">
   <meta name="citation_author" content="Kotrys, Bartosz">
+  <meta name="citation_author" content="Michels, Dominik L.">
   <meta name="citation_author" content="Pirk, Sören">
   <meta name="citation_author" content="Pałubicki, Wojtek">
   <meta name="citation_publication_date" content="2026">
-  <!-- TODO: Add PDF URL once available -->
-  <meta name="citation_pdf_url" content="https://masc-metric.github.io/static/pdfs/paper.pdf">
+  <meta name="citation_arxiv_id" content="2605.22469">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2605.22469.pdf">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -126,6 +127,15 @@
         "affiliation": {
           "@type": "Organization",
           "name": "ArtiCollect"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Dominik L. Michels",
+        "url": "https://dmichels.de/",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "KAUST"
         }
       },
       {
@@ -249,17 +259,33 @@
               <span class="author-block">
                 <a href="https://www.linkedin.com/in/bkotrys/" target="_blank">Bartosz Kotrys</a><sup>3</sup>,</span>
               <span class="author-block">
+                <a href="https://dmichels.de/" target="_blank">Dominik L. Michels</a><sup>4</sup>,</span>
+              <span class="author-block">
                 <a href="https://www.uni-kiel.de/en/person/pirk-soeren-59195" target="_blank">Sören Pirk</a><sup>2</sup>,</span>
               <span class="author-block">
                 <a href="https://wp.faculty.wmi.amu.edu.pl/" target="_blank">Wojtek Pałubicki</a><sup>1</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Adam Mickiewicz University, <sup>2</sup>Kiel University, <sup>3</sup>ArtiCollect</span>
+            <span class="author-block"><sup>1</sup>Adam Mickiewicz University, <sup>2</sup>Kiel University, <sup>3</sup>ArtiCollect, <sup>4</sup>KAUST</span>
           </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2605.22469.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                          <span>Paper</span>
+                        </a>
+                      </span>
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2605.22469" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon"><i class="ai ai-arxiv"></i></span>
+                          <span>arXiv</span>
+                        </a>
+                      </span>
                       <span class="link-block">
                         <a href="https://github.com/masc-metric/masc" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -275,27 +301,12 @@
                         </a>
                       </span>
                     </div>
-                    <p class="is-size-6" style="margin-top: 0.75rem;"><em>Paper and arXiv links coming soon.</em></p>
                     <!--
-                    <span class="link-block">
-                      <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                      <span>Paper</span>
-                      </a>
-                    </span>
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-file-pdf"></i></span>
                       <span>Supplementary</span>
-                      </a>
-                    </span>
-                    <span class="link-block">
-                      <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="ai ai-arxiv"></i></span>
-                      <span>arXiv</span>
                       </a>
                     </span>
                     -->
@@ -442,12 +453,14 @@ End paper poster -->
         <span class="copy-text">Copy</span>
       </button>
     </div>
-    <pre id="bibtex-code"><code>@misc{bartkowiak2026masc,
-  title        = {{MaSC}: A Masked Similarity Metric for Evaluating Concept-Driven Generation},
-  author       = {Bartkowiak, Patryk and Petersen, Lennart and Kotrys, Bartosz and Pirk, S{\"o}ren and Pa{\l}ubicki, Wojtek},
-  year         = {2026},
-  note         = {Preprint},
-  howpublished = {\url{https://masc-metric.github.io/}}
+    <pre id="bibtex-code"><code>@misc{bartkowiak2026mascmaskedsimilaritymetric,
+  title         = {MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation},
+  author        = {Patryk Bartkowiak and Lennart Petersen and Bartosz Kotrys and Dominik Michels and Soren Pirk and Wojtek Palubicki},
+  year          = {2026},
+  eprint        = {2605.22469},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2605.22469}
 }</code></pre>
   </div>
 </section>
