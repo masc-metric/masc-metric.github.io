@@ -109,10 +109,16 @@
       {
         "@type": "Person",
         "name": "Patryk Bartkowiak",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Adam Mickiewicz University"
-        }
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "Adam Mickiewicz University"
+          },
+          {
+            "@type": "Organization",
+            "name": "GreenMatterAI"
+          }
+        ]
       },
       {
         "@type": "Person",
@@ -134,32 +140,57 @@
         "@type": "Person",
         "name": "Dominik L. Michels",
         "url": "https://dmichels.de/",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "KAUST"
-        }
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "KAUST"
+          },
+          {
+            "@type": "Organization",
+            "name": "GreenMatterAI"
+          }
+        ]
       },
       {
         "@type": "Person",
         "name": "Sören Pirk",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Kiel University"
-        }
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "Kiel University"
+          },
+          {
+            "@type": "Organization",
+            "name": "GreenMatterAI"
+          }
+        ]
       },
       {
         "@type": "Person",
         "name": "Wojtek Palubicki",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Adam Mickiewicz University"
-        }
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "Adam Mickiewicz University"
+          },
+          {
+            "@type": "Organization",
+            "name": "GreenMatterAI"
+          }
+        ]
       }
     ],
     "datePublished": "2026-01-01",
     "url": "https://masc-metric.github.io/",
     "image": "https://masc-metric.github.io/static/images/masc-diagram.png",
-    "keywords": ["concept preservation", "prompt following", "text-to-image evaluation", "diffusion models", "SigLIP2", "personalization"],
+    "keywords": [
+      "concept preservation",
+      "prompt following",
+      "text-to-image evaluation",
+      "diffusion models",
+      "SigLIP2",
+      "personalization"
+    ],
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -254,21 +285,21 @@
             <h1 class="title is-1 publication-title">MaSC: A Masked Similarity Metric for Evaluating Concept-Driven Generation</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://patrykbart.faculty.wmi.amu.edu.pl/" target="_blank">Patryk Bartkowiak</a><sup>1</sup>,</span>
+                <a href="https://patrykbart.faculty.wmi.amu.edu.pl/" target="_blank">Patryk Bartkowiak</a><sup>1,5</sup>,</span>
               <span class="author-block">
                 <a href="https://www.linkedin.com/in/lennart-petersen/" target="_blank">Lennart Petersen</a><sup>2</sup>,</span>
               <span class="author-block">
                 <a href="https://www.linkedin.com/in/bkotrys/" target="_blank">Bartosz Kotrys</a><sup>3</sup>,</span>
               <span class="author-block">
-                <a href="https://dmichels.de/" target="_blank">Dominik L. Michels</a><sup>4</sup>,</span>
+                <a href="https://dmichels.de/" target="_blank">Dominik L. Michels</a><sup>4,5</sup>,</span>
               <span class="author-block">
-                <a href="https://www.uni-kiel.de/en/person/pirk-soeren-59195" target="_blank">Sören Pirk</a><sup>2</sup>,</span>
+                <a href="https://www.uni-kiel.de/en/person/pirk-soeren-59195" target="_blank">Sören Pirk</a><sup>2,5</sup>,</span>
               <span class="author-block">
-                <a href="https://wp.faculty.wmi.amu.edu.pl/" target="_blank">Wojtek Palubicki</a><sup>1</sup></span>
+                <a href="https://wp.faculty.wmi.amu.edu.pl/" target="_blank">Wojtek Palubicki</a><sup>1,5</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Adam Mickiewicz University, <sup>2</sup>Kiel University, <sup>3</sup>ArtiCollect, <sup>4</sup>KAUST</span>
+            <span class="author-block"><sup>1</sup>Adam Mickiewicz University, <sup>2</sup>Kiel University, <sup>3</sup>ArtiCollect, <sup>4</sup>KAUST, <sup>5</sup>GreenMatterAI</span>
           </div>
 
           <div class="is-size-5 publication-authors" style="margin-top: 0.5rem;">
@@ -446,14 +477,28 @@ End paper poster -->
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column">
           <h2 class="title is-3">Acknowledgments</h2>
-          <a href="https://articollect.io" target="_blank">
-            <img src="static/images/articollect-logo.png" alt="ArtiCollect" loading="lazy" style="max-width: 260px; height: auto; margin: 0 0 1.25rem;">
-          </a>
-          <div class="content has-text-centered">
+          <div class="ack-logos">
+            <a href="https://articollect.io" target="_blank" class="ack-articollect">
+              <img src="static/images/articollect-logo.png" alt="ArtiCollect" loading="lazy">
+            </a>
+            <a href="https://arena.ai4eosc.eu/" target="_blank" class="ack-eosc">
+              <img src="static/images/eosc-arena-logo.png" alt="EOSC-ARENA" loading="lazy">
+            </a>
+            <a href="https://www.pcss.pl/" target="_blank" rel="noopener noreferrer" class="ack-pcss">
+              <img src="static/images/pcss-logo.png" alt="Poznańskie Centrum Superkomputerowo-Sieciowe (PCSS)" width="200" height="73" loading="lazy">
+            </a>
+          </div>
+          <div class="content has-text-centered ack-text">
             <p>
               This research was conducted in collaboration with <a href="https://articollect.io" target="_blank">ArtiCollect</a>, who funded the work, contributed to data collection, and provided domain expertise in art.
+            </p>
+            <p>
+              This work was supported by the European Union through the <a href="https://arena.ai4eosc.eu/" target="_blank">EOSC-ARENA</a> project (AI Research Enhancement through Networked Agents), Grant Agreement No.&nbsp;101292597.
+            </p>
+            <p>
+              The authors thank <a href="https://www.pcss.pl/" target="_blank" rel="noopener noreferrer">Poznańskie Centrum Superkomputerowo-Sieciowe (PCSS)</a> for providing the computational resources used in the experiments.
             </p>
           </div>
         </div>
