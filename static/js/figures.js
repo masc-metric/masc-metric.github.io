@@ -142,7 +142,11 @@
     html('summary', null, 'Show as a table', details);
     var table = html('table', 'table is-narrow is-striped', null, details);
 
+    var drawnOnce = false;
     function draw(id) {
+      // rows fade in only when switching benchmarks; the first draw is immediate
+      var fade = drawnOnce && !reduceMotion;
+      drawnOnce = true;
       var p = PANELS.filter(function (q) { return q.id === id; })[0];
       var rows = p.rows.slice().sort(function (a, b) { return b[2] - a[2]; });
       var H = top + rows.length * rowH + 8;
@@ -161,7 +165,7 @@
       }
       rows.forEach(function (r, i) {
         var y = top + i * rowH + rowH / 2;
-        var g = el('g', { style: reduceMotion ? '' : 'opacity:0;transition:opacity .35s ' + (i * 0.03) + 's' }, svg);
+        var g = el('g', { style: fade ? 'opacity:0;transition:opacity .35s ' + (i * 0.03) + 's' : '' }, svg);
         el('text', { class: 'row-label' + (r[1] === 'ours' ? ' is-ours' : ''), x: labelW - 12, y: y + 4, 'text-anchor': 'end' }, g).textContent = r[0];
         // full-width row guide, not a stem: the AUC axis does not start at zero
         el('line', { x1: X(p.lo), x2: X(p.hi), y1: y, y2: y, stroke: r[1] === 'ours' ? '#dbeafe' : '#f1f5f9', 'stroke-width': r[1] === 'ours' ? 10 : 1.5, 'stroke-linecap': 'round' }, g);
@@ -174,7 +178,7 @@
           dot.setAttribute('r', 9);
         });
         hit.addEventListener('mouseleave', function () { tip.hide(); dot.setAttribute('r', 7); });
-        if (!reduceMotion) requestAnimationFrame(function () { requestAnimationFrame(function () { g.style.opacity = 1; }); });
+        if (fade) requestAnimationFrame(function () { requestAnimationFrame(function () { g.style.opacity = 1; }); });
       });
       sub.textContent = p.sub;
       insight.textContent = p.insight;
@@ -213,7 +217,10 @@
       chart(card, Math.max(280, w));
     }
     render();
-    window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(render, 150); });
+    // Watch the card itself, not the window: a layout change without a window
+    // resize (a viewport switch, a font load, a scrollbar) must redraw too.
+    if (window.ResizeObserver) new ResizeObserver(function () { clearTimeout(timer); timer = setTimeout(render, 100); }).observe(card);
+    else window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(render, 150); });
   }
 
   function init() {
