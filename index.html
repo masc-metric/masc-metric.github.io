@@ -97,6 +97,7 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+  <script defer src="static/js/figures.js"></script>
   
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
@@ -360,6 +361,19 @@
 </section>
 <!-- End teaser figure -->
 
+<!-- At a glance -->
+<section class="section viz-root" style="padding-top: 0.5rem; padding-bottom: 2rem;">
+  <div class="container">
+    <div class="stat-strip">
+      <div class="stat-tile"><span class="stat-value">+0.471</span><span class="stat-label">agreement with human concept ratings, best non-LLM metric</span></div>
+      <div class="stat-tile"><span class="stat-value">0.992</span><span class="stat-label">AUC telling objects apart in real photos</span></div>
+      <div class="stat-tile"><span class="stat-value">1</span><span class="stat-label">encoder pass per image for both scores</span></div>
+      <div class="stat-tile"><span class="stat-value">161 ms</span><span class="stat-label">per pair on one RTX 3090</span></div>
+    </div>
+  </div>
+</section>
+<!-- End at a glance -->
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -379,6 +393,81 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<!-- Mask demo -->
+<section class="section viz-root">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">One mask, two questions</h2>
+    <p class="section-lead">Whole-image metrics mix two judgments. MaSC splits each image at the concept mask: the subject answers whether the concept was preserved, the background answers whether the prompt was followed.</p>
+  </div>
+  <div id="mask-demo">
+    <div class="mask-controls" style="display:flex;justify-content:center;"></div>
+    <div class="mask-demo">
+      <figure>
+        <div class="mask-frame">
+          <img data-view="image" src="static/images/mask-demo/reference-image.jpg" alt="Reference photo of a vintage motorcycle at sunset" width="640" height="640">
+          <img data-view="concept" src="static/images/mask-demo/reference-concept.jpg" alt="Reference photo with everything but the motorcycle dimmed" width="640" height="640" loading="lazy">
+          <img data-view="background" src="static/images/mask-demo/reference-background.jpg" alt="Reference photo with the motorcycle dimmed" width="640" height="640" loading="lazy">
+        </div>
+        <figcaption>Reference</figcaption>
+      </figure>
+      <figure>
+        <div class="mask-frame">
+          <img data-view="image" src="static/images/mask-demo/generated-image.jpg" alt="Generated image of the motorcycle on a desert road with mountains" width="640" height="640">
+          <img data-view="concept" src="static/images/mask-demo/generated-concept.jpg" alt="Generated image with everything but the motorcycle dimmed" width="640" height="640" loading="lazy">
+          <img data-view="background" src="static/images/mask-demo/generated-background.jpg" alt="Generated image with the motorcycle dimmed" width="640" height="640" loading="lazy">
+        </div>
+        <figcaption>Generated</figcaption>
+      </figure>
+    </div>
+    <p class="mask-explain" aria-live="polite"></p>
+  </div>
+</section>
+<!-- End mask demo -->
+
+<!-- Results -->
+<section class="section hero is-light viz-root">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How it compares</h2>
+    <p class="section-lead">Agreement with human ratings on DreamBench++, and identity discrimination on real photos from ORIDa, against embedding metrics and LLM judges.</p>
+  </div>
+  <div class="viz-card" id="fig-results">
+    <div class="viz-title">Results</div>
+    <div class="viz-subtitle"></div>
+  </div>
+</section>
+<!-- End results -->
+
+<!-- Use it -->
+<section class="section viz-root">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Use it</h2>
+    <p class="section-lead">MaSC is a pip package. Bring your own binary masks of the concept, from SAM or any segmenter.</p>
+  </div>
+  <div class="code-block" style="margin-bottom: 1rem;">
+    <pre><code>pip install masc-metric</code></pre>
+    <button type="button" class="copy-code">Copy</button>
+  </div>
+  <div class="code-block">
+    <pre><code><span class="k">import</span> numpy <span class="k">as</span> np
+<span class="k">from</span> PIL <span class="k">import</span> Image
+<span class="k">from</span> masc <span class="k">import</span> MaSC
+
+masc = MaSC()  <span class="c"># SigLIP2 SO400M-NaFlex; picks cuda, mps or cpu</span>
+
+result = masc.score(
+    ref_image=Image.open(<span class="s">"ref.png"</span>),
+    ref_mask=np.array(Image.open(<span class="s">"ref_mask.png"</span>).convert(<span class="s">"L"</span>)),
+    out_image=Image.open(<span class="s">"out.png"</span>),
+    out_mask=np.array(Image.open(<span class="s">"out_mask.png"</span>).convert(<span class="s">"L"</span>)),
+    prompt=<span class="s">"a photo of a cat on the beach"</span>,
+    object_name=<span class="s">"cat"</span>,  <span class="c"># stripped from the prompt for prompt following</span>
+)
+print(result.cp, result.pf)</code></pre>
+    <button type="button" class="copy-code">Copy</button>
+  </div>
+</section>
+<!-- End use it -->
 
 
 <!-- Image carousel — hidden until results are ready
